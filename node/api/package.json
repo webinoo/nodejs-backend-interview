@@ -1,0 +1,42 @@
+{
+  "name": "interview",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-typescript": "^7.9.0",
+    "@types/bookshelf": "^1.1.0",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.5",
+    "@types/restify": "^8.4.2",
+    "axios": "^0.19.2",
+    "bookshelf": "^1.1.1",
+    "dotenv": "^8.2.0",
+    "jest": "^26.0.1",
+    "jest-coverage-badges": "^1.1.2",
+    "knex": "^0.21.1",
+    "lodash": "^4.17.15",
+    "mysql": "^2.18.1",
+    "restify": "^8.5.1",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3",
+    "validator": "^13.0.0"
+  },
+  "scripts": {
+    "start": "ts-node index.ts",
+    "test": "jest --verbose",
+    "test:coverage": "yarn test -- --coverage --collectCoverageFrom=./monitor/*.ts",
+    "test:badges": "yarn test:coverage && jest-coverage-badges",
+    "copy:test:badges": "yarn test:badges && cp ./coverage/badge-statements.svg ../../res"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
+  }
+}
