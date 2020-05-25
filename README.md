@@ -45,6 +45,12 @@ Please read Specification before using it.
 - Few occurences without type (`any`) replace by specific type
 - More tests: resolvers (supertest) and db controller (have to manage mocking the model chained functions)
 
+## Objections from code review
+
+- Exceptions - catching but not processing further
+- Authorize as middleware
+- Naming Controllers, Resolvers, ...
+
 ## Author
 
 [My Linkedin](https://www.linkedin.com/in/webino/)
